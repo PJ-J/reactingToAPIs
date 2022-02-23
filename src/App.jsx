@@ -26,7 +26,9 @@ const App = () => {
   };
   if (loadFilms) {
     return (
+      
       <main className='container'>
+        <button className='mt-2' onClick={handleFilmToggle} >Back to home</button>
         <section className='row justify-content-center mt-5'>
           {films.map(film => (
             <div className='col-md-6' key={film.id}>
@@ -46,6 +48,7 @@ const App = () => {
   } else if (loadPeople) {
     return (
       <main className='container'>
+        <button className='mt-2' onClick={handlePeopleToggle}>Back to home</button>
         <section className='row justify-content-center mt-5'>
           {people.map(person => (
             <div className='col-md-6' key={person.id}>
